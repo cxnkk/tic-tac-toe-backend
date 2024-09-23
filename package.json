@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "1: An Express.js API    - A singular endpoint that serves some random json data on 'GET /data'. (use to generate https://json-generator.com/)",
+  "main": "app.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.2"
+  }
+}
