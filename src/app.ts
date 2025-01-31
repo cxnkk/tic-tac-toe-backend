@@ -4,15 +4,16 @@ import { players } from "./data";
 
 export const app = express();
 const port = 3000;
+const corsOptions = {
+  origin: "http://localhost:3000",
+  methods: "GET, POST, PUT, DELETE",
+  allowedHeaders: "Content-Type,Authorization",
+};
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
-app.get("/tictactoe", (req, res) => {
-  res.send(players);
-});
-
-app.put("/tictactoe/playing", (req, res) => {
+app.put("/tictactoe", (req, res) => {
   const { userId } = req.body;
 
   let findPlayer = players.find((id) => {
